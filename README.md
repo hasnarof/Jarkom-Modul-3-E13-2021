@@ -403,57 +403,57 @@ Agar transaksi bisa lebih fokus berjalan, maka dilakukan redirect website agar m
 - pada Skypie:
     - install apache2
     
-    `apt-get install apache2 -y`
+        `apt-get install apache2 -y`
     
     - buat direktori **/var/www/super.franky.e13.com** dan isi dengan file hasil unzip
     
-    ```jsx
-    wget [https://raw.githubusercontent.com/FeinardSlim/Praktikum-Modul-2-Jarkom/main/super.franky.zip](https://raw.githubusercontent.com/FeinardSlim/Praktikum-Modul-2-Jarkom/main/super.franky.zip)
-    unzip super.franky.zip```
-    ```
+        ```jsx
+        wget [https://raw.githubusercontent.com/FeinardSlim/Praktikum-Modul-2-Jarkom/main/super.franky.zip](https://raw.githubusercontent.com/FeinardSlim/Praktikum-Modul-2-Jarkom/main/super.franky.zip)
+        unzip super.franky.zip```
+        ```
     
     - buat file **/etc/apache2/sites-available/super.franky.e13.com.conf**, dengan copy dari file **000-default.conf**. Lalu tambahkan dengan:
     
-    ```jsx
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/super.franky.e13.com
-    ServerName super.franky.e13.com
-    ServerAlias www.super.franky.e13.com
-    ```
+        ```jsx
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/super.franky.e13.com
+        ServerName super.franky.e13.com
+        ServerAlias www.super.franky.e13.com
+        ```
     
     - aktifkan konfigurasi
     
-    `a2ensite super.franky.b05.com.conf`
+        `a2ensite super.franky.b05.com.conf`
     
     - restart apache2
 - pada EniesLobby:
     - menambahkan file **/etc/bind/kaizoku/super.franky.b05.com** , dengan isi:
     - pada file **/etc/bind/named.conf.local** , menambahkan:
     
-    ```jsx
-    zone "super.franky.e13.com" {
-            type master;
-            file "/etc/bind/kaizoku/super.franky.e13.com";
-            allow-transfer { 192.206.3.69; };
-    };
-    ```
+        ```jsx
+        zone "super.franky.e13.com" {
+                type master;
+                file "/etc/bind/kaizoku/super.franky.e13.com";
+                allow-transfer { 192.206.3.69; };
+        };
+        ```
     
 - pada Skypie:
     - tambahkan ServerName, pada file **/etc/apache2/apache2.conf ,** menandakan kika nameserver nya adalah IP dari Skypie.
     
-    ```jsx
-    ServerName 192.206.3.69
-    ```
+        ```jsx
+        ServerName 192.206.3.69
+        ```
     
 - pada Water7:
     - pastikan isi dari **/etc/nano resolv.conf** adalah nameserver IP dari EniesLobby (DNS Server).
     - pada **/etc/squid/squid.conf**
     
-    ```jsx
-    acl BLACKLIST dstdomain google.com
-    deny_info http://super.franky.e13.com/ BLACKLIST
-    http_reply_access deny BLACKLIST
-    ```
+        ```jsx
+        acl BLACKLIST dstdomain google.com
+        deny_info http://super.franky.e13.com/ BLACKLIST
+        http_reply_access deny BLACKLIST
+        ```
     
 - pada Loguetown:
     - jalankan `lynx [google.com](http://google.com)` akan teredirect ke [super.franky.e13.com](http://super.franky.e13.com) .
@@ -467,27 +467,27 @@ Saatnya berlayar! Luffy dan Zoro akhirnya memutuskan untuk berlayar untuk **menc
 - pada Water7:
     - pada file **/etc/squid/acl-bandwidth.conf** , tambahkan:
     
-    ```jsx
-    acl download url_regex -i \.jpg$ \.png$
-    
-    auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
-    
-    acl luffy proxy_auth luffybelikapalb05
-    acl zoro proxy_auth zorobelikapalb05
-    
-    delay_pools 2
-    delay_class 1 1
-    delay_parameters 1 1250/1250
-    delay_access 1 allow luffy download
-    delay_access 1 deny zoro
-    delay_access 1 deny all
-    ```
+        ```jsx
+        acl download url_regex -i \.jpg$ \.png$
+        
+        auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
+        
+        acl luffy proxy_auth luffybelikapalb05
+        acl zoro proxy_auth zorobelikapalb05
+        
+        delay_pools 2
+        delay_class 1 1
+        delay_parameters 1 1250/1250
+        delay_access 1 allow luffy download
+        delay_access 1 deny zoro
+        delay_access 1 deny all
+        ```
     
     - include kan **acl-bandwidth.conf** pada file **squid**
     
-    ```jsx
-    include /etc/squid/acl-bandwidth.conf
-    ```
+        ```jsx
+        include /etc/squid/acl-bandwidth.conf
+        ```
     
     - uji coba untuk melakukan download ketika menjadi luffy, kecepatan akan dibatasi untuk format .png dan .jpg .
 
@@ -500,13 +500,13 @@ Sedangkan, Zoro yang sangat bersemangat untuk mencari harta karun, sehingga kece
 - pada Water7:
     - tambahkan isi file **/etc/squid/acl-bandwidth.conf** dengan:
     
-    ```jsx
-    delay_class 2 1
-    delay_parameters 2 -1/-1
-    delay_access 2 allow zoro
-    delay_access 2 deny luffy
-    delay_access 2 deny all
-    ```
+        ```jsx
+        delay_class 2 1
+        delay_parameters 2 -1/-1
+        delay_access 2 allow zoro
+        delay_access 2 deny luffy
+        delay_access 2 deny all
+        ```
     
     - uji coba untuk melakukan download ketika menjadi zoro, maka kecepatan tidak dibatasi.
 
