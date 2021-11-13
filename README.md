@@ -310,7 +310,7 @@ Pada Loguetown, proxy **harus bisa diakses** dengan nama [**jualbelikapal.yyy.co
     ```
     
 - Restart squid → `service squid restart`
-- Pada **Loguetown**, aktifkan proxy → `export http_proxy="http://jualbelikapal.e13.com:5000"` (untuk memastikan proxy sudah aktif, cek dengan `env | grep -i proxy` — seringkali proxy tidak aktif dilakukan export menggunakan bash script), cek dengan `lynx http://its.ac.id` .
+- Pada **Loguetown**, aktifkan proxy → `export http_proxy="http://jualbelikapal.e13.com:5000"` (untuk memastikan proxy sudah aktif, cek dengan `env | grep -i proxy` — seringkali proxy tidak aktif apabila dilakukan export menggunakan bash script), cek dengan `lynx http://its.ac.id` .
     
     ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2010.png)
     
