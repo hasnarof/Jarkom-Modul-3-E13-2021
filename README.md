@@ -345,7 +345,7 @@ Agar transaksi jual beli lebih aman dan pengguna website ada dua orang, proxy **
     http_access allow USERS
     ```
     
-- Restart squid → `service squid start`.
+- Restart squid → `service squid restart`.
 - `lynx http://its.ac.id` sebagai **Loguetown**
     
     ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2011.png)
