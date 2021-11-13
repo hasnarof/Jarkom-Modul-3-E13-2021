@@ -451,6 +451,13 @@ Agar transaksi bisa lebih fokus berjalan, maka dilakukan redirect website agar m
         ```jsx
         acl BLACKLIST dstdomain google.com
         deny_info http://super.franky.e13.com/ BLACKLIST
+        delay_pools 2
+        delay_class 1 1
+        delay_parameters 1 1250/1250
+        delay_access 1 allow luffy download
+        delay_access 1 deny zoro
+        delay_access 1 deny all
+        ```
         http_reply_access deny BLACKLIST
         ```
     
