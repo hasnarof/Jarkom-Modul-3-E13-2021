@@ -119,9 +119,8 @@ Kelompok E13
         apt-get install nano
         apt-get install squid
         ```
-        
 
-![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled.png)
+        ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled.png)
 
 ## Soal 2
 
@@ -140,7 +139,7 @@ Foosha sebagai DHCP Relay
     
     ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%201.png)
     
-    - start dhcp relay → `service isc-dhcp-relay start`
+- start dhcp relay → `service isc-dhcp-relay start`
 
 ## Soal 3
 
@@ -177,7 +176,7 @@ Ada beberapa kriteria yang ingin dibuat oleh Luffy dan Zoro, yaitu:
     - restart dhcp server → `service isc-dhcp-server restart` → `service isc-dhcp-server status`
     - Untuk mengecek, jalankan `ip a` pada Loguetown.
     
-    ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%202.png)
+        ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%202.png)
     
 
 ## Soal 4
@@ -200,7 +199,7 @@ Client yang melalui Switch3 mendapatkan range IP dari [prefix IP].3.30 - [prefix
     - restart dhcp server → `service isc-dhcp-server restart` → `service isc-dhcp-server status`
     - Untuk mengecek, jalankan `ip a` pada TottoLand
     
-    ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%203.png)
+        ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%203.png)
     
 
 ## Soal 5
@@ -347,7 +346,7 @@ Agar transaksi jual beli lebih aman dan pengguna website ada dua orang, proxy **
     ```
     
 - Restart squid → `service squid start`.
-- `lynx [http://its.ac.id](http://its.ac.id)` sebagai **Loguetown**
+- `lynx http://its.ac.id` sebagai **Loguetown**
     
     ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2011.png)
     
@@ -391,7 +390,7 @@ Transaksi jual beli tidak dilakukan setiap hari, oleh karena itu akses internet 
 - untuk mengecek, gunakan sintaks dibawah ini untuk mengubah date time
     - `date -s "12 NOV 2021 16:00:00"` (access denied)
     - `date -s "12 NOV 2021 18:00:00"` (access accepted)
-- coba akses `[http://its.ac.id](http://its.ac.id)` melalui **Loguetown** diluar waktu AVAILABLE_WORKING**,** maka akan muncul `Access Denied` seperti gambar dibawah ini
+- coba akses `http://its.ac.id` melalui **Loguetown** diluar waktu AVAILABLE_WORKING maka akan muncul `Access Denied` seperti gambar dibawah ini
     
     ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2012.png)
     
@@ -456,7 +455,7 @@ Agar transaksi bisa lebih fokus berjalan, maka dilakukan redirect website agar m
         ```
     
 - pada Loguetown:
-    - jalankan `lynx [google.com](http://google.com)` akan teredirect ke [super.franky.e13.com](http://super.franky.e13.com) .
+    - jalankan `lynx google.com` akan teredirect ke [super.franky.e13.com](http://super.franky.e13.com) .
 
         ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2013.png)
 
