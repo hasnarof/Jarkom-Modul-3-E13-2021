@@ -458,7 +458,7 @@ Agar transaksi bisa lebih fokus berjalan, maka dilakukan redirect website agar m
 - pada Loguetown:
     - jalankan `lynx [google.com](http://google.com)` akan teredirect ke [super.franky.e13.com](http://super.franky.e13.com) .
 
-![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2013.png)
+        ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2013.png)
 
 ## Soal 12
 
@@ -491,7 +491,7 @@ Saatnya berlayar! Luffy dan Zoro akhirnya memutuskan untuk berlayar untuk **menc
     
     - uji coba untuk melakukan download ketika menjadi luffy, kecepatan akan dibatasi untuk format .png dan .jpg .
 
-![Screenshot (120).png](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Screenshot_(120).png)
+        ![Screenshot (120).png](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Screenshot_(120).png)
 
 ## Soal 13
 
@@ -510,7 +510,7 @@ Sedangkan, Zoro yang sangat bersemangat untuk mencari harta karun, sehingga kece
     
     - uji coba untuk melakukan download ketika menjadi zoro, maka kecepatan tidak dibatasi.
 
-![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2014.png)
+        ![Untitled](Jarkom-Modul-3-E13-2021%20da0913b782464fd0b9ec3dd4b9d144c3/Untitled%2014.png)
 
 ## Kendala
 
