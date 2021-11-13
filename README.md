@@ -474,13 +474,7 @@ Saatnya berlayar! Luffy dan Zoro akhirnya memutuskan untuk berlayar untuk **menc
         acl luffy proxy_auth luffybelikapalb05
         acl zoro proxy_auth zorobelikapalb05
         
-        delay_pools 2
-        delay_class 1 1
-        delay_parameters 1 1250/1250
-        delay_access 1 allow luffy download
-        delay_access 1 deny zoro
-        delay_access 1 deny all
-        ```
+
     
     - include kan **acl-bandwidth.conf** pada file **squid**
     
